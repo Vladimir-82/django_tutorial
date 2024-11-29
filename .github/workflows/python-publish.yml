@@ -28,8 +28,7 @@ jobs: # jobs. We will have two jobs (test and publish) with multiple steps.
         run: poetry install
       - name: Pytest
         run: |
-          export DJANGO_SETTINGS_MODULE=django_tutorial.settings
-          poetry run pytest tests
+          poetry run pytest
       - name: flake8
         run: |
           poetry run flake8 .
